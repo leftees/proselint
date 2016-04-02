@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """General-purpose tools shared across linting checks."""
+
 from __future__ import print_function
 from __future__ import unicode_literals
 import sys
@@ -335,3 +336,10 @@ def context(text, position, level="paragraph"):
         pass
 
     return ""
+
+
+def create_nlp():
+    """Create the spaCy NLP object."""
+    from spacy.en import English
+
+    return English()
